@@ -8,6 +8,7 @@
 <body>
 	<div id="app">
 		{{name}}
+		<button v-on:click="change"> 改变name值</button>
 	</div>
 </body>
 
@@ -17,6 +18,11 @@
 		el:'#app', // 表示当前vue对象接管的app的div区域
 		data: {
 			name: '黑马程序员'
+		},
+		methods:{
+			change:function() {
+				this.name += '1';
+			}	
 		}
 	});
 
