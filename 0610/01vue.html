@@ -3,14 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<script src="vue1026.js"></script>
 </head>
 <body>
 	<div id="app">
-		{{name}}
+		{{ name + '1'}}
+		{{ name == 'wo' ? 'true' : 'false'}}
+		{{ if_name(name) }} 
 		<button v-on:click="change"> 改变name值</button>
 	</div>
 </body>
+<script src="vue1026.js"></script>
 
 <script>
 	
@@ -22,7 +24,10 @@
 		methods:{
 			change:function() {
 				this.name += '1';
-			}	
+			},
+			'if_name':function(str) {
+				return str == 'wo'
+			} 	
 		}
 	});
 
