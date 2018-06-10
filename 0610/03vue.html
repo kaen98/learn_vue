@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="vue1026.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-bind:value="name">
+		<input type="text" :value="name">
+		<a v-bind="{href:'http://itcast.cn/index/'+id}">跳转</a>
+	</div>
+</body>
+
+<script>
+	var vm = new Vue({
+		el:'#app', // 表示当前vue对象接管的app的div区域
+		data: {
+			name: '黑马程序员',
+			id:2
+		}
+	});
+
+</script>
+</html>
