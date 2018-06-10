@@ -3,11 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style type="text/css">
+		[v-cloak]{
+			display: none;
+		}
+	</style>
 </head>
 <body>
 	<div id="app">
-		<span v-text='name'></span>
-		<div v-html='name'></span>
+		<!-- <span v-text='name'></span> -->
+		<!-- <div v-html='name'></span> -->
+			<div v-cloak>{{name}}</div>
 	</div>
 </body>
 <script src="vue1026.js"></script>
