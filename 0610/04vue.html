@@ -3,11 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<script src="vue1026.js"></script>
+	<!-- <script src="vue1026.js"></script> -->
+	<script src="vue221.js"></script>
 </head>
 <body>
 	<div id="app">
 		<input type="text" v-model='msg'>
+
+
+		<form action="#">
+			<input type="text" v-model.trim="username" placeholder="请输入 用户名" />
+			<input type="text" v-model="password" placeholder="请输入 密码" />
+			<button @click="login">确定登录</button>
+		</form>
 	</div>
 </body>
 
@@ -16,6 +24,13 @@
 		el:'#app', // 表示当前vue对象接管的app的div区域
 		data: {
 			msg: '黑马程序员',
+			username: '',
+			password: '',
+		},
+		methods: {
+			login: function() {
+				alert('用户名: ' + this.username + ' 密码:' + this.password);
+			}
 		}
 	});
 
