@@ -14,21 +14,27 @@
 		<form action="#">
 			<input type="text" v-model.trim="username" placeholder="请输入 用户名" />
 			<input type="text" v-model="password" placeholder="请输入 密码" />
+			<input type="text" v-model.number="age" placeholder="请输入 年龄" number/>
 			<button @click="login">确定登录</button>
 		</form>
 	</div>
 </body>
 
 <script>
+	console.log(1);
 	var vm = new Vue({
 		el:'#app', // 表示当前vue对象接管的app的div区域
 		data: {
 			msg: '黑马程序员',
 			username: '',
 			password: '',
+			age: '',
 		},
 		methods: {
 			login: function() {
+				console.log(this.age);
+				console.log(this.age = this.age + 1);
+				console.log(typeof this.age);
 				alert('用户名: ' + this.username + ' 密码:' + this.password);
 			}
 		}
