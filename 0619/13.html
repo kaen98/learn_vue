@@ -75,7 +75,9 @@
 				this.name = '';
 			},
 			delData: function(id) {
-
+				if (!confirm('是否要删除数据?')) {
+					return;
+				}
 				var index = this.list.findIndex(function(item){
 					return item.id == id
 				});
