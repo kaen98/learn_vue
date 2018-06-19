@@ -29,6 +29,7 @@
 	<div id="app">
 		<input type="text" v-model="id">
 		<input type="text" v-model="name">
+		<input type="text" placeholder="请输入筛选条件" v-model="sname">
 		<button @click="addData">添加品牌</button>
 		<table id="tb">
 			<tr>
@@ -40,7 +41,7 @@
 			<tr v-if="list.length == 0">
 				<td colspan="4">当前列表无数据</td>
 			</tr>
-			<tr v-for="item in list">
+			<tr v-for="item in list|filterBy sname in 'name'">
 				<td>{{item.id}}</td>
 				<td>{{item.name}}</td>
 				<td>{{item.ctime}}</td>
@@ -62,6 +63,7 @@
 			],
 			id: 0,
 			name: '',
+			sname: '',
 		},
 		methods: {
 			addData: function() {
