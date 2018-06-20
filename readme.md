@@ -12,7 +12,7 @@
     08Vue基础 - 系统指令v-model和双向数据绑定.avi
     09Vue基础 - 系统指令v-for的使用和vue1.0与vue2.0版本中的使用区别.avi
     10Vue基础 - 系统指令v-if和v-show .avi
-    11Vue基础 - 系统指令v-on .avi
+    - 11Vue基础 - 系统指令v-on .avi
     12Vue基础 - 品牌案例-列表功能 .avi
     12Vue基础 - 品牌案例-列表功能-实现无数据提示内容.avi
     13Vue基础 - 品牌案例-添加品牌数据.avi
