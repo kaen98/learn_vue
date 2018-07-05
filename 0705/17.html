@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../../js/vue1026.js"></script>
+</head>
+<body>
+	<div id="app">
+		<!-- 系统过滤器 -->
+		{{list | json | uppercase }}
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	$app = new Vue({
+		el: "#app",
+		data: {
+			list: [{name: "zhaokai"}, {age: "28"}],
+		}
+	});
+</script>
